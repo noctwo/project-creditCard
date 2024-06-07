@@ -1,7 +1,13 @@
 import { CreditCard } from "./modules/Credit.Card";
 
-let newCreditCard = new CreditCard("1234567890000000", "Timmy", new Date(2025,12,1), "345");
+let newCreditCard = new CreditCard("Timmy");
 
-console.log(newCreditCard);
-console.log(newCreditCard.cardNumber)
+console.log(newCreditCard)
 
+//  newCreditCard.cardNumber = 'hola';
+newCreditCard.cardNumber = '1234567890123456'
+
+// newCreditCard.cvv = '2'
+newCreditCard.cvv = '23'
+
+newCreditCard.expirationDate = new Date(2024, 12, 12)
