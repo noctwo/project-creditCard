@@ -18,16 +18,19 @@ function createCard(cardNumber:string,cardHolder:string,expDate:Date,cvv:string)
     const newInfoDiv = document.createElement("div")
     const newCardholder = document.createElement("h3")
     const newExpDate = document.createElement("h3")
+    const newCvv = document.createElement("h3");
     
     newInfoDiv.appendChild(newCardholder)
-    //newExpDate.appendChild(newExpDate)
+    newCardDiv.appendChild(newExpDate)
     newCardDiv.appendChild(newCardnumber)  
     newCardDiv.appendChild(newInfoDiv) 
+    newCardDiv.appendChild(newCvv);
 
     
-    newCardnumber.textContent = newCard.cardNumber
-    newCardholder.textContent =newCard.cardHolder
-    newExpDate.innerHTML =newCard.expirationDate
+    newCardnumber.textContent = newCard.cardNumber;
+    newCardholder.textContent = newCard.cardHolder;
+    newExpDate.innerHTML = newCard.expirationDate.toString();
+    newCvv.innerText = newCard.cvv;
     
 }
 

@@ -1,7 +1,7 @@
 class CreditCard{
     _cardNumber: string = '';
     cardHolder: string;
-    _expirationDate: Date = new Date;
+    _expirationDate: Date = new Date();
     _cvv: string = '';
 
     constructor( cardHolder:string){
@@ -15,9 +15,9 @@ class CreditCard{
     set cardNumber(value: string){
         if(value.length == 16 ){
             this._cardNumber = value;
-            console.log("yes");
+            console.log(this.cardNumber);
         } else {
-            console.log("nope");
+            console.log("no-cardnumber");
         }
     }
 
@@ -27,9 +27,9 @@ class CreditCard{
 
     set expirationDate(value) {
         if (this._expirationDate < value) {
-            console.log("yessexpiration");
+            console.log(this.expirationDate);
         } else {
-            console.log('nopeexpiration')
+            console.log("no-expiration")
         }
     }
 
@@ -38,11 +38,11 @@ class CreditCard{
     }
 
     set cvv(value: string) {
-        if(value.length > 3 ){
-            this._cardNumber = value;
-            console.log('yescvv')
+        if(value.length == 3 ){
+            this._cvv = value;
+            console.log(this.cvv)
         } else {
-            console.log("nopecvv");
+            console.log("no-cvv");
         }
     }
     
