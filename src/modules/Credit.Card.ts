@@ -38,7 +38,7 @@ class CreditCard{
     }
 
     set cvv(value: string) {
-        if(value.length == 3 ){
+        if(value.length > 3 ){
             this._cardNumber = value;
             console.log('yescvv')
         } else {
